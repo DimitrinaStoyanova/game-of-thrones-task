@@ -61,6 +61,7 @@ export const login = (data: LoginFields) => async (dispatch: AppDispatch) => {
     payload: user
   });
 
+  navigationUtils.navigate(PAGES_PATHS.SEASONS);
 };
 
 export const register = (data: User) => async (dispatch: AppDispatch) => {
