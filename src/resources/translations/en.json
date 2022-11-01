@@ -1,0 +1,64 @@
+{
+  "translation": {
+    "common": {
+      "buttons": {
+        "login": "Login",
+        "logout": "Logout",
+        "register": "Register",
+        "filter": "Filter",
+        "save": "Save",
+        "cancel": "Cancel"
+      },
+      "messages": {
+        "loginSuccessfully": "Login Successful",
+        "registerSuccessfully": "Register Successful",
+        "savedSuccessfully": "Saved successfully"
+      },
+      "errors": {
+        "error": "Error",
+        "requiredField": "Field is required",
+        "invalidEmail": "Invalid email address",
+        "notFound": "404 - Page Not Found",
+        "notFoundText": "The page you requested could not be found.",
+        "notAuthorized": "401 - Not Authorized",
+        "internalServerErr": "500 - Internal Server Error",
+        "serverErrText": "An unexpected error has occurred while trying to access the page. We apologize for the inconvenience.",
+        "unhandledErr": "An unexpected Error has occurred",
+        "unhandledErrText": "An unexpected error has occurred while trying to access the page you requested. We apologize for the inconvenience."
+      },
+      "fields": {
+        "name": "Name",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "email": "Email",
+        "password": "Password",
+        "repeatPassword": "Repeat Password",
+        "acceptTermAndConditions": "I agree to the Term And Conditions"
+      },
+      "season": "Season",
+      "episode": "Episode",
+      "episodeAired": "Season {{seasonNumber}}, Episode {{episodeNumber}} aired {{released}}"
+    },
+    "navigationBar": {
+      "home": "Home",
+      "seasons": "Seasons",
+      "favorites": "Favourites"
+    },
+    "episodeDetailsPage": {
+      "imDbRating" : "IMDb RATING",
+      "imDbRatingMax" : "10"
+    },
+    "favoriteEpisodesPage": {
+      "noEpisodesMsg" : "You don't have any added episodes :("
+    },
+    "loginPage": {
+      "registerMsg" : "Don't have an account?"
+
+    },
+    "login": "Login",
+    "register": "Register",
+    "profile": "Profile",
+    "logout": "Logout",
+    "returnToHomePage": "Return to home page"
+  }
+}

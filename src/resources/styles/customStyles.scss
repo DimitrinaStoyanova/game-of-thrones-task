@@ -1,0 +1,898 @@
+//Colors
+
+$gold: #af8740;
+$blue: #778586;
+$darkBlue: #354559;
+$darkGray: #1f1f1f;
+$black: #000;
+$light: #eeefdc;
+//Sizes
+
+$xxs: 5px;
+$xs: 10px;
+$s: 24px;
+$m: 35px;
+$l: 75px;
+
+//Font sizes
+$fm: 14px; //p span inputs labels
+$fl: 20px; //buttons H2
+$fxl: 24px; //H1
+
+// Components sizes
+$textInputHeight: 39px;
+$textInputWidth: 250px;
+$extraSmallTextInputField: 90px;
+$smallTextInputField: 165px; //170
+$avatarHeight: 60px;
+$buttonsWidth: 150px;
+$buttonsHeight: 35px;
+$inputsBorderRadius: $textInputHeight / 2;
+$sectionsBorderRadius: 16.5px;
+$tableButton: 35px;
+$navBarWidth: 107px;
+$smallIcon: 16px;
+$checkboxSize: 20px;
+
+.m-xs {
+  margin: $xs;
+}
+
+.mt-xs {
+  margin-top: $xs;
+}
+
+.mr-xs {
+  margin-right: $xs;
+}
+
+.ml-xs {
+  margin-left: $xs;
+}
+
+.mb-xs {
+  margin-bottom: $xs;
+}
+
+.m-s {
+  margin: $s;
+}
+
+.mt-s {
+  margin-top: $s;
+}
+
+.mr-s {
+  margin-right: $s;
+}
+
+.ml-s {
+  margin-left: $s;
+}
+
+.mb-s {
+  margin-bottom: $s;
+}
+
+.m-m {
+  margin: $m;
+}
+
+.mt-m {
+  margin-top: $m;
+}
+
+.mr-m {
+  margin-right: $m;
+}
+
+.ml-m {
+  margin-left: $m;
+}
+
+.mb-m {
+  margin-bottom: $m;
+}
+
+.m-l {
+  margin: $l;
+}
+
+.ml-m {
+  margin-left: $m;
+}
+
+.mt-l {
+  margin-top: $l;
+}
+
+.mr-l {
+  margin-right: $l;
+}
+
+.mb-l {
+  margin-bottom: $l;
+}
+
+.ml-l {
+  margin-left: $l;
+}
+
+.dark-blue {
+  background-color: $black;
+}
+
+.gold {
+  background-color: $gold;
+}
+
+.align-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.align-left {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.align-right {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gap-xs {
+  gap: $xs;
+}
+
+.gap-s {
+  gap: $s;
+}
+
+.gap-m {
+  gap: $m;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.display-none {
+  display: none;
+}
+
+.content-container {
+  padding: 125px $l;
+}
+
+.app-container {
+  width: 100%;
+  position: relative;
+  background-color: $darkBlue;
+  min-height: 100vh;
+}
+
+.gold-text {
+  color: $gold !important;
+}
+
+input {
+  font-size: $fm;
+}
+
+/* Hide Numeric Input Arrows Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.grid-2-columns {
+  display: grid !important;
+  width: 100%;
+  grid-template-columns: 50% 50%;
+}
+
+.text-input,
+.select-input {
+  position: relative;
+
+  input,
+  select,
+  textarea {
+    width: $textInputWidth;
+    height: $textInputHeight;
+    border-radius: $inputsBorderRadius;
+    background-color: $light;
+    border: 1px solid $black;
+    padding: 0 20px;
+    font-size: $fm;
+    color: $black;
+  }
+
+  textarea {
+    padding: 20px;
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline: none;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    box-shadow: 0 0 0 30px $light inset !important;
+  }
+
+  input:-webkit-autofill {
+    -webkit-text-fill-color: $black !important;
+  }
+
+  label {
+    position: absolute;
+    top: -8px;
+    left: 17px;
+    background-color: $light;
+    padding: 0 3px;
+    font-size: $fm;
+    color: $black;
+    z-index: 0;
+    font-weight: bold;
+  }
+
+  .no-border input[type='text'] {
+    border: none !important;
+  }
+
+  .readable-input-label {
+    position: unset;
+  }
+
+  select:invalid {
+    background: red !important;
+  }
+
+  .disabled {
+    opacity: 0.3;
+  }
+}
+
+.dark-input,
+.dark-select {
+  input,
+  select,
+  textarea,
+  .search-wrapper {
+    background-color: $darkBlue;
+  }
+
+  label {
+    background-color: $darkBlue;
+    font-weight: bold;
+  }
+
+  span {
+    color: $black;
+    font-size: $fm;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    box-shadow: 0 0 0 30px $darkBlue inset !important;
+  }
+
+  input:-webkit-autofill {
+    -webkit-text-fill-color: $black !important;
+  }
+}
+
+.full-width {
+  width: 100% !important;
+
+  input[type='text'] {
+    width: 100% !important;
+  }
+
+  input[type='number'] {
+    width: 100% !important;
+  }
+}
+
+.half-width {
+  width: 50% !important;
+}
+
+.quarter-width {
+  width: 25% !important;
+}
+
+.center-text {
+  text-align: center;
+}
+
+
+input[type='checkbox'],
+input[type='radio'] {
+  min-height: $checkboxSize;
+  min-width: $checkboxSize;
+  cursor: pointer;
+}
+
+.checkbox-input {
+  display: flex;
+  align-items: center;
+  gap: $xs;
+  color: $black;
+  font-size: $fm;
+
+  label {
+    background-color: $light;
+    font-weight: bold;
+  }
+}
+
+
+.input-checkbox {
+  display: flex;
+  align-items: center;
+  gap: $xs;
+  color: $black;
+  font-size: $fm;
+
+  label {
+    background-color: $black;
+    font-weight: bold;
+  }
+}
+
+
+.medium-input {
+  input {
+    width: $textInputWidth !important;
+  }
+}
+
+.small-input {
+  input,
+  select {
+    width: $smallTextInputField !important;
+  }
+}
+
+.small-select {
+  input,
+  select {
+    width: $smallTextInputField !important;;
+  }
+}
+
+.readable-input {
+  input {
+    border: none;
+    background-color: transparent;
+  }
+}
+
+.center-text-input {
+  input {
+    text-align: center;
+  }
+}
+
+.login-inputs {
+  input {
+    width: 450px;
+    background-color: $light;
+    border: 2px solid $black;
+  }
+
+  label {
+    font-weight: bold;
+    background-color: $light;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    box-shadow: 0 0 0 30px $light inset !important;
+  }
+
+  .disabled {
+    opacity: 0.3;
+  }
+}
+
+.error-message {
+  position: absolute;
+  top: 40px;
+  left: 19px;
+  color: darkred;
+  font-size: $fm;
+}
+
+.error.text-input,
+.error.date-input,
+.error.select-input,
+.error.number-input {
+  label {
+    color: darkred;
+  }
+
+  input {
+    border-color: darkred;
+  }
+}
+
+.error.text-area {
+  label {
+    color: darkred;
+  }
+
+  textarea {
+    border-color: darkred;
+  }
+}
+
+.error.select-input {
+  select {
+    border-color: darkred;
+  }
+}
+
+.login-inputs-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.common-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: $buttonsWidth;
+  height: $buttonsHeight;
+  border-radius: $buttonsHeight / 2;
+  font-size: $fl;
+  border: none;
+  color: $light;
+
+  .button-icon {
+    font-size: $fxl;
+    padding-left: 5px;
+  }
+
+  .button-content {
+    padding: 0 15px;
+  }
+
+  .button-counter {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 25px;
+    height: 25px;
+    border-radius: 17.5px;
+    background-color: $light;
+    color: $black;
+    font-size: $fl;
+    padding: 0 5px;
+  }
+
+  &:disabled {
+    background-color: $light;
+  }
+}
+
+.unauthenticated {
+  .common-page {
+    margin-top: $m;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.login-container {
+  background-color: $black;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .image-container {
+    text-align: center;
+  }
+
+  .login-content {
+    background-color: $light;
+    border-radius: $sectionsBorderRadius;
+
+    .login-header {
+      font-size: $fxl;
+      text-align: center;
+      color: $gold;
+      padding: $m 0;
+      border-bottom: 2px solid $darkBlue;
+      font-weight: bold;
+    }
+
+    label {
+      background-color: $light;
+      font-weight: bold;
+    }
+
+    span {
+      color: $black;
+      font-size: $fm;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      padding-bottom: $m;
+    }
+  }
+}
+
+.navigation {
+  position: fixed;
+  width: 100%;
+  height: $l;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $black;
+
+  .logo {
+    width: 100px;
+  }
+
+  li:last-child {
+    margin-left: auto;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    justify-content: flex-start;
+    margin-bottom: 0px;
+    padding: 10px 60px;
+    width: auto;
+
+    li {
+      list-style: none;
+      font-size: $fm;
+
+      .link-nav {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        gap: 8px;
+
+        &:hover {
+          color: $gold;
+        }
+
+        .nav-icon {
+          font-size: $fxl;
+        }
+      }
+
+      .active {
+        color: $gold;
+      }
+    }
+  }
+
+  .user-container {
+    img {
+      background-color: #fefefe;
+      width: 45px;
+      height: 45px;
+      border-radius: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .dropdown-menu.show {
+    background-color: $light;
+    margin-top: 7%;
+    right: 3%;
+
+    a:hover {
+      background-color: #af8740b5;
+    }
+  }
+}
+
+.filter-container {
+  .filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $s;
+    margin-bottom: 45px;
+  }
+
+  .filter-fields {
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $s;
+
+      .filter-inputs-container {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+      }
+
+      .filter-button-container {
+        margin-left: auto;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: $s;
+      }
+
+      button {
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+.user-names {
+  display: flex;
+  gap: $xs;
+}
+
+.seasons-form {
+  .fixed-container{
+    position: fixed;
+    width: 90%;
+    height: 80px;
+    z-index: 2;
+    background-color: $darkBlue;
+    padding: 20px 0px;
+    top: $l;
+
+    .filter-container {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+
+  #episodes-filter {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .seasons {
+    width: 70%;
+    display: flex;
+    justify-content: left;
+
+    .seasons-nav {
+      min-width: 500px;
+      background-color: $black;
+      border: 1px solid $gold;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex: 1 0 auto;
+      height: 40px;
+
+      a {
+        min-height: 36px;
+        padding: $xs;
+        color: $darkGray;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+      }
+
+      a:hover,
+      a:focus,
+      a:active
+      {
+        color: $gold;
+      }
+    }
+  }
+
+  .cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 35px;
+
+    .seasons-container {
+      position: relative;
+      text-align: left;
+      color: white;
+
+      .top-left {
+        position: absolute;
+        top: 20px;
+        left: 40px;
+        font-weight: bold;
+      }
+    }
+
+    .card {
+      width: 320px;
+
+      img {
+        width: auto;
+        height: 200px;
+        object-fit: cover;
+        cursor: pointer;
+      }
+
+      .plot-summary {
+        overflow: hidden;
+        width: 270px;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+      }
+    }
+  }
+}
+
+.star-icon {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.star-icon-favorites {
+  font-size: 25px;
+  cursor: pointer;
+
+  path {
+    color: #f5c519;
+  }
+}
+
+.profile-container {
+  background-color: $darkBlue;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .login-content {
+    background-color: $light;
+    border-radius: $sectionsBorderRadius;
+
+    .login-header {
+      font-size: $fxl;
+      text-align: center;
+      color: $gold;
+      padding: $m 0;
+      border-bottom: 2px solid $darkBlue;
+      font-weight: bold;
+    }
+
+    label {
+      background-color: $light;
+      font-weight: bold;
+    }
+
+    span {
+      color: $black;
+      font-size: $fm;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      padding-bottom: $m;
+    }
+  }
+
+}
+
+.home-page {
+  height: 50vh;
+}
+
+.episode-container {
+
+  h4 {
+    color: $light;
+  }
+
+  p {
+    color: $light;
+    font-size: $fm;
+
+    span {
+      //color: $gold;
+    };
+  }
+
+  .star-icon {
+    path {
+      color: #f5c519;
+    }
+  }
+
+  .rating {
+    font-size: $fl;
+  }
+
+  .episode-info-container {
+    display: flex;
+    gap: $m;
+
+    .season-number {
+      font-size: $fl;
+      font-weight: bold;
+      color: $gold
+    }
+
+    .image-container {
+      width: 500px;
+      img {
+        border: 5px solid black;
+      }
+    }
+
+    .info-container {
+      width: 600px;
+
+      .main-info{
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .rating-container {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .plot-container {
+      p {
+        color: white;
+      }
+    }
+  }
+
+
+}
