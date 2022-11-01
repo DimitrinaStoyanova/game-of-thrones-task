@@ -84,7 +84,7 @@ export const updateUser = (data: User) => async (dispatch: Dispatch) => {
 };
 
 export const logout = () => async (dispatch: Dispatch) => {
-  removeCurrentUserFromLocalStore();
+  localStorage.clear();
 
   dispatch<Logout>({
     type: ActionTypes.logout,
